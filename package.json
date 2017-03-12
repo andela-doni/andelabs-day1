@@ -1,0 +1,19 @@
+{
+  "name": "andelabs-day1",
+  "version": "1.0.0",
+  "description": "OOP",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "tests/tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/debbieooo/andelabs-day1.git"
+  },
+  "author": "Deborah Oni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/debbieooo/andelabs-day1/issues"
+  },
+  "homepage": "https://github.com/debbieooo/andelabs-day1#readme"
+}

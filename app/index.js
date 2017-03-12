@@ -17,24 +17,24 @@ module.exports= {
 
 		}
 
-		elseif(typeof(input)==='null'){
+		else if(typeof(input)==='null'){
 
 			return 'no value';
 
 
 		}
 
-		elseif(typeof(input)==='boolean'){
+		else if(typeof(input)==='boolean'){
 
 			return boolean;
 		}
 
-		elseif(typeof(input)==='number'){
+		else if(typeof(input)==='number'){
 
 			if(input<100){
 				return 'less than 100';
 			}
-			elseif(input==100){
+			else if(input==100){
 				return 'equal to 100';
 			}
 
@@ -44,7 +44,7 @@ module.exports= {
 
 		}
 
-		elseif(Array.isArray(input)){
+		else if(Array.isArray(input)){
 
 
 			if(input.length>=3){
@@ -59,10 +59,12 @@ module.exports= {
 
 		}
 
-		elseif(typeof input ==='function'){
+		else if(typeof input ==='function'){
 
 			input(true);
 		}
+
+		
 	}
 
 

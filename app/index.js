@@ -11,61 +11,124 @@ module.exports= {
 
 	dataTypes: function(input){
 
-		if(typeof(input)==='string'){
+	if(input ===null){
 
-			return input.length;
-
+			return'no value';
+			
 		}
 
-		else if(typeof(input)==='null'){
+		else if(typeof input==='undefined'){
 
 			return 'no value';
 
 
 		}
 
-		else if(typeof(input)==='boolean'){
+		else if(typeof input ==='boolean'){
 
-			return boolean;
+
+			return input;
 		}
 
-		else if(typeof(input)==='number'){
+		else if(typeof input === 'number'){
 
 			if(input<100){
 				return 'less than 100';
 			}
-			else if(input==100){
-				return 'equal to 100';
-			}
 
-			else{
+			else if(input>100){
 				return 'more than 100';
 			}
 
-		}
-
-		else if(Array.isArray(input)){
-
-
-			if(input.length>=3){
-
-				return input[2];
-			}
-
 			else{
-				return 'undefined';
+
+				return 'equal to 100';
 			}
-			
 
 		}
 
 		else if(typeof input ==='function'){
 
-			input(true);
+			return input(true);
+
 		}
 
-		
+		else if(typeof input==='string'){
+
+
+			return input.length;
+		}
+
+
+		else if(Array.isArray(input)){
+
+
+
+				return input[2];
+
+			
+					}
+
+		},
+
+
+
+	getPrimes: function(n){
+
+
+	if(typeof(n)==='number'){
+
+
+		if(n<2 && n>0){
+
+		return [];
+	}
+
+	if(n<=0){
+		 return 'wrong input';
 	}
 
 
+
+	var primeNo=[2], isPrime;
+
+
+	for (var i =3; i <n; i +=2){
+
+		isPrime = true;
+
+		for (var j=0; j<primeNo.length;j++){
+
+			if(i%primeNo[j]==0){
+				isPrime=false;
+				break;
+			}
+
+		}
+
+
+		if(isPrime){
+			primeNo.push(i);
+		}
+
+
+
+	}
+
+	return primeNo;
+
+	}
+
+
+	else{
+
+
+	}
+
+
+
+	
 }
+}
+
+

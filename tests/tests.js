@@ -1,5 +1,5 @@
 'use strict'
-var app = require('../app/index');
+var app = require('../app/index.js');
 
 describe("Data types tests ", function() {
   describe("Case for some falsy values", function() {
